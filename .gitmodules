@@ -1,0 +1,6 @@
+[submodule "themes/Sakura"]
+	path = themes/Sakura
+	url = https://github.com/dexfire/hexo-theme-sakura
+[submodule "source/_posts"]
+	path = source/_posts
+	url = https://github.com/dexfire/_posts

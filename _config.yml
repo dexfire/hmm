@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://dexfire.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -52,6 +52,92 @@ highlight:
   wrap: true
   hljs: false
 
+disableNunjucks: true
+
+# Markdown-it config
+#markdown: 'zero'
+#markdown: 'default'
+#markdown: 'commonmark'
+
+# Markdown-it config
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶
+
+markdown_it_plus:
+    highlight: true
+    html: true
+    xhtmlOut: true
+    breaks: true
+    langPrefix:
+    linkify: true
+    typographer:
+    quotes: “”‘’
+    pre_class: highlight
+    plugins:
+        - plugin:
+            name: markdown-it-mark
+            enable: true
+        - plugin:
+            name: markdown-it-toc-and-anchor
+            enable: true
+            options:
+                toc: true
+                tocClassName: 'markdownIt-TOC'
+                tocFirstLevel: 2
+                tocLastLevel: 6
+                tocCallback:
+                anchorLink: true
+                anchorLinkSymbol: ''
+                anchorFirstLevel: 2
+                anchorLastLevel: 6
+                anchorLinkSpace: true
+                anchorLinkSymbolClassName:
+                anchorLinkBefore: true
+                anchorClassName: 'markdownIt-Anchor'
+                resetIds: true
+        - plugin:
+            name: markdown-it-emoji
+            enable: true
+        - plugin:
+            name: markdown-it-sub
+            enable: true
+        - plugin:
+            name: markdown-it-sup
+            enable: true
+        - plugin:
+            name: markdown-it-deflist
+            enable: true
+        - plugin:
+            name: markdown-it-abbr
+            enable: true
+        - plugin:
+            name: markdown-it-footnote
+            enable: true
+        - plugin:
+            name: markdown-it-ins
+            enable: true
+        - plugin:
+            name: markdown-it-katex
+            enable: true
+  
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -99,6 +185,10 @@ ignore:
 theme: Sakura
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/one-command-deployment
+# https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/dexfire/hmm_sakura 
+  branch: master
+  message: Site updated at {{ now('YYYY-MM-DD HH:mm:ss') }}

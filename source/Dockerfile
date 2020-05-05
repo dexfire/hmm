@@ -1,9 +1,8 @@
-FROM python:3.6
+FROM node:12.16.3
 
-MAINTAINER maicius
-WORKDIR /qqzone
-COPY requirements.txt /qqzone
-COPY Songti.ttc /usr/share/fonts
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
-COPY . /qqzone
-CMD python src/web/server.py
+MAINTAINER dexfire29@foxmail.com
+COPY . /app/
+WORKDIR /app
+RUN npm i
+EXPOSE 80
+CMD ["hexo", "server", "-p", "80"]

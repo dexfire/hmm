@@ -135,9 +135,12 @@ markdown_it_plus:
             name: markdown-it-ins
             enable: true
         - plugin:
+            name: markdown-it-enml-todo
+            enable: true
+        - plugin:
             name: markdown-it-katex
             enable: true
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -190,6 +193,6 @@ theme: Sakura
 # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
 deploy:
   type: git
-  repo: https://github.com/dexfire/hmm_sakura 
+  repo: https://github.com/dexfire/hmm_sakura
   branch: master
   message: Site updated at {{ now('YYYY-MM-DD HH:mm:ss') }}

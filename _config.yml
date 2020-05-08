@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 你终于回来啦~ ♪(＾∀＾●)ﾉ
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: dexfire
+language: zh-cn
 timezone: ''
 
 # URL
@@ -135,7 +135,7 @@ markdown_it_plus:
             name: markdown-it-ins
             enable: true
         - plugin:
-            name: markdown-it-enml-todo
+            name: markdown-it-todo
             enable: true
         - plugin:
             name: markdown-it-katex

@@ -24,8 +24,9 @@
     "hexo-server": "^1.0.0",
     "hexo-tag-bili": "^1.0.0",
     "hexo-tag-fancybox_img": "^1.0.1",
+    "hexo-tag-fontawesome": "^1.0.0",
     "hexo-wordcount": "^6.0.1",
     "markdown-it-katex": "^2.0.3",
-    "markdown-it-todo": "^1.0.4"
+    "markdown-it-todo": "^1.0.5"
   }
 }

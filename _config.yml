@@ -30,7 +30,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - cppreference/*
+  - cppreference/**
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -193,7 +193,11 @@ theme: Sakura
 ## Docs: https://hexo.io/docs/one-command-deployment
 # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
 deploy:
-  type: git
-  repo: https://github.com/dexfire/hmm_sakura
-  branch: master
-  message: Site updated at {{ now('YYYY-MM-DD HH:mm:ss') }}
+  - type: git
+    repo: https://github.com/dexfire/hmm_sakura
+    branch: master
+    message: Site updated at {{ now('YYYY-MM-DD HH:mm:ss') }}
+  - type: git
+    repo: https://gitee.com/dexfire/dexfire/
+    branch: gh-pages
+    message: Site updated at {{ now('YYYY-MM-DD HH:mm:ss') }}
